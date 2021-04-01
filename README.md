@@ -13,9 +13,11 @@ We will release the source code for reproducing the experiments in the CVPR 2021
 * [Semi-Aves 2020 Competition at FGVC7](https://github.com/cvl-umass/semi-inat-2020)
 
 ### Citation
+```
 @inproceedings{su2021realistic,
   author    = {Jong{-}Chyi Su and Zezhou Cheng and Subhransu Maji},
   title     = {A Realistic Evaluation of Semi-Supervised Learning for Fine-Grained Classification},
   booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
   year      = {2021}
 }
+```
