@@ -1,0 +1,10 @@
+__pycache__/*
+*/__pycache__/*
+*/*/__pycache__/*
+results/*
+models/MoCo_init/*
+models/MoCo_supervised/*
+models/supervised/*
+models/*.pth.tar
+slurm_err/*
+slurm_out/*
