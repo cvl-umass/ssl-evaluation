@@ -75,8 +75,8 @@ This model was trained using this [github code](https://github.com/macaodha/inat
 * [Semi-Aves 2020 Competition at FGVC7](https://github.com/cvl-umass/semi-inat-2020)
 
 ## Paper and Citation 
-**Unsupervised Discovery of Object Landmarks via Contrastive Learning**\
-Zezhou Cheng, Jong-Chyi Su, Subhransu Maji\
+**A Realistic Evaluation of Semi-Supervised Learning for Fine-Grained Classification**\
+Jong-Chyi Su, Zezhou Cheng, Subhransu Maji\
 CVPR 2021 (oral)\
 [arXiv link](https://arxiv.org/abs/2104.00679)\
 Bibtex:
