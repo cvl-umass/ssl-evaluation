@@ -4,12 +4,12 @@ Code for the paper "[A Realistic Evaluation of Semi-Supervised Learning for Fine
 
 ## Preparing Datasets and Data Splits
 We used the following datasets in the paper:
-- **Semi-Aves**: This is the dataset from the [Semi-Aves Challenge](https://github.com/cvl-umass/semi-inat-2020) at [FGVC7 workshop](https://sites.google.com/view/fgvc7) at CVPR 2020. 
+- **Semi-Aves**: This is the dataset of the [Semi-Aves Challenge](https://github.com/cvl-umass/semi-inat-2020) at [FGVC7 workshop](https://sites.google.com/view/fgvc7) at CVPR 2020.
 - **Semi-Fungi**: We created a split from the dataset of [2018 FGVCx Fungi Classification Challenge](https://github.com/visipedia/fgvcx_fungi_comp) at [FGVC5 workshop](https://sites.google.com/view/fgvc5) at CVPR 2018.
 - **CUB**: We created a split from the [Caltech-UCSD Birds-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) dataset.
 
 After this paper was submitted, we collected a new Semi-iNat dataset for the semi-supervised challenge this year:
-- **Semi-iNat**: this is the dataset from the [Semi-iNat Challenge](https://github.com/cvl-umass/semi-inat-2021) at [FGVC8 workshop](https://sites.google.com/view/fgvc8) at CVPR 2021.
+- **Semi-iNat**: This is a new dataset for the [Semi-iNat Challenge](https://github.com/cvl-umass/semi-inat-2021) at [FGVC8 workshop](https://sites.google.com/view/fgvc8) at CVPR 2021. Different from Semi-Aves, Semi-iNat has more species from different kingdoms, has no domain label. For more details please see the [challenge website](https://github.com/cvl-umass/semi-inat-2021).
 
 The splits of the above datasets can be found under ```data/${dataset}/${split}.txt```. Here are the splits for each datasets:
 - l_train
@@ -25,10 +25,10 @@ Each line of the text files include the filename and the label.
 Please download the datasets from the corresponding websites.\
 For Semi-Aves, put the data under `data/semi_aves`.\
 For Semi-Fungi and CUB, download images and put them under `data/semi_fungi/images` and `data/cub/images`.
-For experiments of Semi-Fungi in the paper, we first resize the images to a maximum of 300px for each side.
 
-Note1: we also reported the results of another split of Semi-Aves in the appendix, but we do not release the labels because it will leak the labels for unlabeled data.\
-Note2: we also provided the species names of Semi-Aves under ```data/semi_aves_species_names.txt```
+Note 1: For experiments of Semi-Fungi in the paper, we first resize the images to a maximum of 300px for each side.\
+Note 2: We reported the results of another split of Semi-Aves in the appendix (for cross-validation), but we do not release the labels because it will leak the labels for unlabeled data.\
+Note 3: We also provided the species names of Semi-Aves under ```data/semi_aves_species_names.txt```, and the species names of Semi-Fungi.
 
 ## Training
 We provide the code for all the methods included in the paper, except for FixMatch and MoCo. 
@@ -54,7 +54,7 @@ For all the hyper-parameters, please see the following shell scripts:
 - `exp_MoCo.sh` for MoCo + supervised training
 - `exp_distill.sh` for self-training and MoCo + self-training 
 
-## Pre-trained Models
+## Pre-Trained Models
 We provide supervised training models, MoCo pre-trained models, as well as MoCo + supervised training models, for both Semi-Aves and Semi-Fungi datasets. 
 Here are the links to download the model:
 
@@ -79,7 +79,7 @@ This model was trained using this [github code](https://github.com/macaodha/inat
 Jong-Chyi Su, Zezhou Cheng, Subhransu Maji\
 CVPR 2021 (oral)\
 [arXiv link](https://arxiv.org/abs/2104.00679)\
-Bibtex:
+Bibtex
 ```
 @inproceedings{su2021realistic,
   author    = {Jong{-}Chyi Su and Zezhou Cheng and Subhransu Maji},
