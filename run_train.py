@@ -180,11 +180,6 @@ def main(args):
             checkpoint = torch.load(checkpoint_filename)
             
             if args.load_dir != '':
-            	## Loading pre-trained model
-                start_iter = 0
-                best_acc = 0.0
-                model_ft.fc = nn.Linear(2048, num_classes)
-
                 ## Load MoCo or iNat pre-trained models
                 if args.MoCo:
                     state_dict = checkpoint['model']
