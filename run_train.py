@@ -65,7 +65,6 @@ def main(args):
     # ==================  Craete data loader ==================================
     data_transforms = {
         'train': transforms.Compose([
-            transforms.Resize(args.input_size), 
             transforms.RandomResizedCrop(args.input_size),
             # transforms.ColorJitter(Brightness=0.4, Contrast=0.4, Color=0.4),
             transforms.RandomHorizontalFlip(),
