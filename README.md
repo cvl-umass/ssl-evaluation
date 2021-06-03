@@ -3,7 +3,7 @@
 This repo contains code for "[A Realistic Evaluation of Semi-Supervised
 Learning for Fine-Grained
 Classification](https://arxiv.org/abs/2104.00679), _Jong-Chyi Su,
-Zezhou Cheng, and Subhransu Maji,_ CVPR 21."
+Zezhou Cheng, and Subhransu Maji,_ CVPR 21." Here is the [poster](https://people.cs.umass.edu/~jcsu/papers/ssl_evaluation/poster.pdf) for the paper.
 
 ## Preparing Datasets and Splits
 We used the following datasets in the paper:
