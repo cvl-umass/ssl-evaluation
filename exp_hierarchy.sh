@@ -56,7 +56,7 @@ for level in genus kingdom phylum class order family species; do
       out_path=slurm_out_bmvc/${exp_dir}
       err_path=slurm_err_bmvc/${exp_dir}
       export task init alg batch_size lr wd num_iter exp_dir unlabel MoCo kd_T alpha warmup level
-      sbatch --gres=gpu:1 -p 1080ti-long -o ${out_path}.out -e ${err_path}.err run_ablation.sbatch
+      sbatch --gres=gpu:1 -p 1080ti-long -o ${out_path}.out -e ${err_path}.err run_hierarchy.sbatch
 
     done
   done
@@ -114,7 +114,7 @@ for level in phylum; do
       err_path=slurm_err_bmvc/${exp_dir}
 
       export task init alg batch_size lr wd num_iter exp_dir unlabel MoCo kd_T alpha warmup level
-      sbatch --gres=gpu:1 -p 1080ti-long -o ${out_path}.out -e ${err_path}.err run_ablation.sbatch
+      sbatch --gres=gpu:1 -p 1080ti-long -o ${out_path}.out -e ${err_path}.err run_hierarchy.sbatch
 
     done
   done
@@ -160,7 +160,7 @@ for level in phylum; do
       out_path=slurm_out_bmvc/${exp_dir}
       err_path=slurm_err_bmvc/${exp_dir}
       export task init alg batch_size lr wd num_iter exp_dir unlabel MoCo kd_T alpha warmup level
-      sbatch --gres=gpu:1 -p 1080ti-long -o ${out_path}.out -e ${err_path}.err run_ablation.sbatch
+      sbatch --gres=gpu:1 -p 1080ti-long -o ${out_path}.out -e ${err_path}.err run_hierarchy.sbatch
 
     done
   done
@@ -210,7 +210,7 @@ for level in phylum; do
       err_path=slurm_err_bmvc/${exp_dir}
 
       export task init alg batch_size lr wd num_iter exp_dir unlabel MoCo kd_T alpha warmup level
-      sbatch --gres=gpu:1 -p 1080ti-long -o ${out_path}.out -e ${err_path}.err run_ablation.sbatch
+      sbatch --gres=gpu:1 -p 1080ti-long -o ${out_path}.out -e ${err_path}.err run_hierarchy.sbatch
 
     done
   done
@@ -260,7 +260,7 @@ for level in phylum; do
       err_path=slurm_err_bmvc/${exp_dir}
 
       export task init alg batch_size lr wd num_iter exp_dir unlabel MoCo kd_T alpha warmup level
-      sbatch --gres=gpu:1 -p 1080ti-long -o ${out_path}.out -e ${err_path}.err run_ablation.sbatch
+      sbatch --gres=gpu:1 -p 1080ti-long -o ${out_path}.out -e ${err_path}.err run_hierarchy.sbatch
 
     done
   done
