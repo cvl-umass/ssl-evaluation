@@ -1,9 +1,9 @@
 # Semi-Supervised Learning for Fine-Grained Classification
 
-This repo contains code for "[A Realistic Evaluation of Semi-Supervised
-Learning for Fine-Grained
-Classification](https://arxiv.org/abs/2104.00679), _Jong-Chyi Su,
-Zezhou Cheng, and Subhransu Maji,_ CVPR 21." Here is the [poster](https://people.cs.umass.edu/~jcsu/papers/ssl_evaluation/poster.pdf) for the paper.
+This repo contains the code of:
+
+- **A Realistic Evaluation of Semi-Supervised Learning for Fine-Grained Classification**, Jong-Chyi Su, Zezhou Cheng, and Subhransu Maji, CVPR 2021. [[paper](https://arxiv.org/abs/2104.00679), [poster](https://people.cs.umass.edu/~jcsu/papers/ssl_evaluation/poster.pdf), [slides](https://people.cs.umass.edu/~jcsu/papers/ssl_evaluation/slides.pdf)]
+- **Semi-Supervised Learning with Taxonomic Labels**, Jong-Chyi Su and Subhransu Maji, BMVC 2021. [[paper](), [slides](https://people.cs.umass.edu/~jcsu/papers/ssl_evaluation/slides_bmvc.pdf)]
 
 ## Preparing Datasets and Splits
 We used the following datasets in the paper:
@@ -52,7 +52,7 @@ because it will leak the labels for unlabeled data. \
 Semi-Fungi. The names were not shared in the competetion.
 
 
-## Training and Evaluation
+## Training and Evaluation (CVPR paper)
 We provide the code for all the methods included in the paper, except for FixMatch and MoCo. 
 This includes methods of supervised training, self-training, PL, and curriculum PL.
 This code is developed based on [this PyTorch implementation](https://github.com/perrying/realistic-ssl-evaluation-pytorch).
@@ -75,6 +75,19 @@ For all the hyper-parameters, please see the following shell scripts:
 - `exp_CPL.sh` for curriculum pseudo-labeling
 - `exp_MoCo.sh` for MoCo + supervised training
 - `exp_distill.sh` for self-training and MoCo + self-training 
+
+## Training and Evaluation (BMVC paper)
+In our BMVC paper, we added the hierarchical supervision of coarse labels on top of semi-supervised learning.
+
+To train the model, use the following command:
+```
+CUDA_VISIBLE_DEVICES=0 python run_train_hierarchy.py --task ${task} --init ${init} --alg ${alg} --unlabel ${unlabel} --num_iter ${num_iter} --warmup ${warmup} --lr ${lr} --wd ${wd} --batch_size ${batch_size} --exp_dir ${exp_dir} --MoCo ${MoCo} --alpha ${alpha} --kd_T ${kd_T} --level ${level}
+```
+The following are the arguments different from the above:
+- ${level}: choose from {genus, kingdom, phylum, class, order, family, species}
+- ${alg}: choose from {hierarchy, PL_hierarchy, distill_hierarchy}
+
+For the settings and hyper-parameters, please see `exp_hierarchy.sh`.
 
 ## Pre-Trained Models
 We provide supervised training models, MoCo pre-trained models, as
@@ -100,8 +113,8 @@ model was trained using this [github
 code](https://github.com/macaodha/inat_comp_2018).
 
 ## Related Challenges
-* [Semi-iNat 2021 Competition at FGVC8](https://github.com/cvl-umass/semi-inat-2021)
-* [Semi-Aves 2020 Competition at FGVC7](https://github.com/cvl-umass/semi-inat-2020)
+* Semi-iNat 2021 Competition at FGVC8: [[challenge website](https://github.com/cvl-umass/semi-inat-2021), [kaggle](https://www.kaggle.com/c/semi-inat-2021), [tech report](https://arxiv.org/abs/2106.01364)]
+* Semi-Aves 2020 Competition at FGVC7: [[challenge website](https://github.com/cvl-umass/semi-inat-2020), [kaggle](https://www.kaggle.com/c/semi-inat-2020), [tech report](https://arxiv.org/abs/2103.06937)]
 
 ## Citation 
 ```
@@ -110,5 +123,26 @@ code](https://github.com/macaodha/inat_comp_2018).
   title     = {A Realistic Evaluation of Semi-Supervised Learning for Fine-Grained Classification},
   booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
   year      = {2021}
+}
+
+@inproceedings{su2021taxonomic,
+  author    = {Jong{-}Chyi Su and Subhransu Maji},
+  title     = {Semi-Supervised Learning with Taxonomic Labels},
+  booktitle = {British Machine Vision Conference (BMVC)},
+  year      = {2021}
+}
+
+@article{su2021semi_iNat,
+      title={The Semi-Supervised iNaturalist Challenge at the FGVC8 Workshop}, 
+      author={Jong-Chyi Su and Subhransu Maji},
+      year={2021},
+      journal={arXiv preprint arXiv:2106.01364}
+}
+
+@article{su2021semi_aves,
+      title={The Semi-Supervised iNaturalist-Aves Challenge at FGVC7 Workshop}, 
+      author={Jong-Chyi Su and Subhransu Maji},
+      year={2021},
+      journal={arXiv preprint arXiv:2103.06937}
 }
 ```
