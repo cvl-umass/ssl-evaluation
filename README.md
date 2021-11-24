@@ -3,7 +3,7 @@
 This repo contains the code of:
 
 - **A Realistic Evaluation of Semi-Supervised Learning for Fine-Grained Classification**, Jong-Chyi Su, Zezhou Cheng, and Subhransu Maji, CVPR 2021. [[paper](https://arxiv.org/abs/2104.00679), [poster](https://people.cs.umass.edu/~jcsu/papers/ssl_evaluation/poster.pdf), [slides](https://people.cs.umass.edu/~jcsu/papers/ssl_evaluation/slides.pdf)]
-- **Semi-Supervised Learning with Taxonomic Labels**, Jong-Chyi Su and Subhransu Maji, BMVC 2021. [[paper](), [slides](https://people.cs.umass.edu/~jcsu/papers/ssl_evaluation/slides_bmvc.pdf)]
+- **Semi-Supervised Learning with Taxonomic Labels**, Jong-Chyi Su and Subhransu Maji, BMVC 2021. [[paper](https://arxiv.org/abs/2111.11595), [slides](https://people.cs.umass.edu/~jcsu/papers/ssl_evaluation/slides_bmvc.pdf)]
 
 ## Preparing Datasets and Splits
 We used the following datasets in the paper:
