@@ -16,11 +16,7 @@ for unlabel in in inout; do
         ## From scratch ##
         init=scratch
         num_iter=10000
-        # lr=3e-2
-        ## ZZ used 1e-2
         lr=1e-2
-        # wd=3e-3 
-        ## ZZ used 1e-3
         wd=1e-3
       elif [ ${init} == imagenet ]
       then
@@ -28,9 +24,6 @@ for unlabel in in inout; do
         init=imagenet
         num_iter=10000
         lr=1e-3
-        # lr=3e-3
-        ## ZZ used 1e-3
-        # wd=1e-4
         wd=1e-3
       elif [ ${init} == inat ]
       then
@@ -38,9 +31,6 @@ for unlabel in in inout; do
         init=inat
         num_iter=10000
         lr=1e-3
-        # lr=3e-3
-        ## ZZ used 1e-3
-        # wd=1e-4
         wd=1e-3
       fi
 
